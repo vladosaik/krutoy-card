@@ -1,0 +1,173 @@
+
+/* седектор * применяется ко всем элементам */
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Arial',sans-serif;
+}
+.card{
+    background-color:white ;
+    width: 550px;
+    padding: 30px;
+
+}
+
+body{
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.avatar{
+    width: 200px;
+    border-radius: 20%;
+    border: 4px solid white;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    margin-bottom:30px;
+    transition:all 0.3s ease;
+}
+.header{
+    text-align: center;
+    margin-bottom:30px;
+}
+.avatar:hover{
+    transform:scale(1.05);
+    box-shadow: 0px 6px 15px rgba(103,126,234,0.4)
+}
+h1{
+    font-size:28px;
+    font-weight: 700;
+    color:rgb(88, 29, 115);
+    margin-bottom:10px;
+}
+.title{
+    color:rgb(110, 26, 113);
+    font-size: 18px;
+    font-weight: 500;
+    /* текст скрыт */
+    width: 0;
+    /* чтробы свойство width раблотало с текстом */
+    display:inline-block;
+    /* скрывает текст за пределами блока */
+    overflow:hidden;
+    border-right: 3px solid #764ba2;
+    animation:typing 4s steps(25, end) infinite, curor 0.8s steps(1,end),infinite;
+    /* запрещает перенос текста на новую */
+    white-space: nowrap;
+
+}
+/* анимация расширяет элемент от текущей ширины до 50% ширины родителя */
+@keyframes typing{
+    to{
+        width: 50%;
+    }
+     
+}
+@keyframes cursor{
+    from,to{
+        border-color:transparent;
+    }
+    50%{
+        border-color: #764ba2;
+    }
+
+}
+.description{
+    color: #667eea;
+    line-height: 1.6;
+    font-size:16px;
+    margin-bottom:30px;
+    text-align: center;
+}
+.stats{
+    display:flex;
+    justify-content: space-around;
+    background-color: rgb(88, 29, 115);
+    border:1px solid rgb(166, 112, 193);
+    border-radius: 16px;
+    padding:10px;
+    margin-bottom: 30px;
+
+}
+.experiance{
+    text-align: center;
+}
+.experiance-number{
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 5px;
+}
+.experiance-label{
+    font-size: 14px;
+    color:#718096;
+}
+h2{
+    margin-bottom:15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(88, 29, 115);
+    text-align: center;
+
+
+}
+ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px ;
+    list-style-type: none;
+}
+li{
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 15px 30px;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+}
+
+li:hover{
+    transform: translateY(-2px);
+}
+
+.link-project{
+    margin-top:10px;
+    color: #667eea;
+    text-decoration: none;
+    background-color: rgba(102, 126, 234, 0.1);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 12px 0;
+    border-radius: 10px;
+    transition: all 1s;
+}
+
+
+.link-project:hover{
+    background-color: #764ba2;
+    color: white;
+}
+
+/* смартфоны - 320px, 480px и более
+планшеты - 768px и более
+нетбуки - 1024px и более
+мониторы - 1280px, 1600px, 1920px и более */
+
+@media (max-width: 480px){
+    .card{
+        padding: 10px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    .stats{
+        justify-content: center;
+        gap: 20px;
+    }
+}
